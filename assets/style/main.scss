@@ -4,9 +4,11 @@
   --f-body: "Manrope", sans-serif;
   --f-title: "Allura", cursive;
   --primary: #630c0c;
+  --head-nav: #320505;
   --secondary: #ffd04a;
   --white: #fff;
   --black: #000;
+  --gray-25: #efefef;
 }
 body {
   font-family: var(--f-body);
@@ -100,13 +102,88 @@ select {
 }
 // ----------------------- Text body style library -----------------------
 .text-body {
-  font-family: var(--f-inter);
+  font-family: var(--f-body);
+
+  &-3xl {
+    font-size: 24px;
+    line-height: 133%;
+
+    @media screen and (max-width: 1280px) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 20px;
+    }
+
+    &-uppercase {
+      @extend .text-body-3xl;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &-bold {
+      @extend .text-body-3xl;
+      font-weight: 700;
+    }
+
+    &-semibold {
+      @extend .text-body-3xl;
+      font-weight: 600;
+    }
+
+    &-medium {
+      @extend .text-body-3xl;
+      font-weight: 500;
+    }
+
+    &-regular {
+      @extend .text-body-3xl;
+      font-weight: 400;
+    }
+  }
+  &-2xl {
+    font-size: 22px;
+    line-height: 133%;
+
+    @media screen and (max-width: 1280px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 18px;
+    }
+
+    &-uppercase {
+      @extend .text-body-2xl;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &-bold {
+      @extend .text-body-2xl;
+      font-weight: 700;
+    }
+
+    &-semibold {
+      @extend .text-body-2xl;
+      font-weight: 600;
+    }
+
+    &-medium {
+      @extend .text-body-2xl;
+      font-weight: 500;
+    }
+
+    &-regular {
+      @extend .text-body-2xl;
+      font-weight: 400;
+    }
+  }
   &-xl {
     font-size: 20px;
     line-height: 150%;
 
     @media screen and (max-width: 1280px) {
-      font-size: 16px;
+      font-size: 18px;
     }
     @media screen and (max-width: 992px) {
       font-size: 16px;
@@ -114,7 +191,7 @@ select {
 
     &-uppercase {
       @extend .text-body-xl;
-      font-weight: 500;
+      font-weight: 700;
       text-transform: uppercase;
     }
 
@@ -152,7 +229,7 @@ select {
 
     &-uppercase {
       @extend .text-body-lg;
-      font-weight: 500;
+      font-weight: 700;
       text-transform: uppercase;
     }
 
@@ -190,7 +267,7 @@ select {
 
     &-uppercase {
       @extend .text-body-md;
-      font-weight: 500;
+      font-weight: 700;
       text-transform: uppercase;
     }
 
@@ -221,7 +298,7 @@ select {
 
     &-uppercase {
       @extend .text-body-sm;
-      font-weight: 500;
+      font-weight: 700;
       text-transform: uppercase;
     }
 
@@ -252,7 +329,7 @@ select {
 
     &-uppercase {
       @extend .text-body-xs;
-      font-weight: 500;
+      font-weight: 700;
       text-transform: uppercase;
     }
 
@@ -305,7 +382,7 @@ select {
   gap: 4px;
   .input-title {
     @extend .text-body-md-medium;
-    color: #1f2237;
+    color: var(--primary);
     &.regular {
       font-weight: 400;
     }
@@ -409,6 +486,42 @@ select {
   }
 }
 
+a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  &.link-white {
+    color: var(--white);
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+  &.link-light {
+    color: var(--gray-25);
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+  &.link-primary {
+    color: var(--primary);
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+  &.link-secondary {
+    color: var(--secondary);
+    &:hover {
+      color: var(--white);
+    }
+  }
+  &.link-nav {
+    color: var(--head-nav);
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+}
+
 // ----------------------- content box-shadow style -----------------------
 .shadow {
   &-1 {
@@ -447,15 +560,13 @@ hr {
     width: 100%;
     height: 1px;
     border: none;
-    background: #d1d5db;
+    background: var(--gray-25);
   }
-  &.divider-footer {
-    width: 100%;
-    height: 1px;
-    margin-top: 40px;
+  &.divider-v-6 {
+    width: 1px;
+    height: 25px;
     border: none;
-    background: #f9fafb;
-    opacity: 0.16;
+    background: var(--gray-25);
   }
 }
 
@@ -568,3 +679,77 @@ hr {
   }
 }
 // ----------------------- other global page style -----------------------
+.header {
+  .social {
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    &-icon {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      padding: 6px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 37px;
+      background: var(--white);
+      &:hover {
+        svg {
+          path {
+            fill: var(--primary);
+          }
+        }
+      }
+    }
+  }
+  .breadcrumb-header {
+    .breadcrumb-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      max-height: calc(100vh - 50px - 24px * 3);
+      overflow-y: auto;
+    }
+  }
+}
+.footer {
+  &-first-row {
+    position: relative;
+    background: var(--primary);
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      user-select: none;
+      background: url("../image/footer-illus-bg.svg") no-repeat left/cover;
+    }
+  }
+  .social {
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    &-icon {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        svg {
+          path {
+            stroke: var(--secondary);
+          }
+        }
+      }
+    }
+  }
+}
