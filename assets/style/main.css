@@ -405,6 +405,10 @@ select:focus {
   outline: none;
 }
 
+.text-allura {
+  font-family: var(--f-title);
+}
+
 .text-heading-display-1 {
   font-size: 96px;
   line-height: 100%;
@@ -442,12 +446,12 @@ select:focus {
 }
 @media screen and (max-width: 1280px) {
   .text-heading-h3 {
-    font-size: 38px;
+    font-size: 34px;
   }
 }
 @media screen and (max-width: 992px) {
   .text-heading-h3 {
-    font-size: 34px;
+    font-size: 30px;
   }
 }
 .text-heading-h4 {
@@ -457,7 +461,7 @@ select:focus {
 }
 @media screen and (max-width: 1280px) {
   .text-heading-h4 {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -619,11 +623,11 @@ select:focus {
 .text-body-md-regular {
   font-weight: 400;
 }
-.text-body-sm, .text-body-sm-regular, .text-body-sm-medium, .text-body-sm-semibold, .text-body-sm-bold, .text-body-sm-uppercase {
+.text-body-sm, .text-body-sm-regular, .text-body-sm-medium, .text-body-sm-semibold, .text-body-sm-bold, .text-body-sm-uppercase, .button {
   font-size: 14px;
   line-height: 171.5%;
 }
-.text-body-sm-uppercase {
+.text-body-sm-uppercase, .button {
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -675,11 +679,37 @@ select:focus {
   -webkit-line-clamp: 4;
 }
 
+.form-input-contact {
+  position: relative;
+  width: 100%;
+}
+.form-input-contact::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 0;
+  background: url("/assets/image/form-illus.svg") no-repeat right/cover;
+}
+
 .input-label {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+.input-label.w-50 {
+  width: calc(50% - 12px);
+}
+@media (max-width: 768px) {
+  .input-label.w-50 {
+    width: 100%;
+  }
 }
 .input-label .input-title {
   color: var(--primary);
@@ -765,6 +795,7 @@ select:focus {
   background-color: var(--primary);
   color: var(--secondary);
   cursor: pointer;
+  color: var(--secondary);
 }
 .button:hover {
   background: var(--primary);
@@ -853,6 +884,12 @@ hr.divider-v-6 {
   height: 25px;
   border: none;
   background: var(--gray-25);
+}
+hr.divider-v-3 {
+  width: 3px;
+  height: 100%;
+  border: none;
+  background: #808080;
 }
 
 .pagination {
@@ -959,6 +996,17 @@ hr.divider-v-6 {
   .modal-wrapper .modal-container .modal-content {
     padding-right: 14px;
   }
+}
+
+.figure-hover {
+  overflow: hidden;
+}
+.figure-hover figure img {
+  transition: all 0.5s ease-in-out;
+}
+.figure-hover:hover figure img {
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
 }
 
 .header .social-list {

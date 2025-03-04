@@ -29,6 +29,9 @@ tailwind.config = {
             white: '#FFF',
             black: '#000',
             'black-2': '#0F0F0F',
+            neutral: {
+                50: "#F2F2F2",
+            },
             gray: {
                 // 90: "#1F2237",
                 // 80: "#373A51",
