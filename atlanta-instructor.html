@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlanta - Master Barber</title>
+    <title>Atlanta - Instructor</title>
     <!-- taildwind css import -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind.config.js"></script>
@@ -240,7 +240,7 @@
         <section class="hero-bg hero-img">
             <div class="container relative z-[2] w-full h-full flex items-end justify-center">
                 <div class="relative">
-                    <h1 class="text-heading-display-1 text-white">Master Barber</h1>
+                    <h1 class="text-heading-display-1 text-white">Instructor</h1>
                     <figure
                         class="absolute top-0 right-0 translate-x-1/2 md:translate-x-[100%] -translate-y-1/2 md:translate-y-[-20%]">
                         <img src="/assets/image/esthetician-sparkle.svg" alt="icon">
@@ -248,18 +248,35 @@
                 </div>
             </div>
         </section>
-        <section class="relative sub-hero min-h-10">
+        <style>
+            .instructor-tab-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 24px 16px 24PX;
+                border-bottom: 4px solid;
+                border-color: transparent;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            .instructor-tab-item.active {
+                border-color: #FDD8D8;
+            }
+        </style>
+        <section class="relative sub-hero pt-5 pb-0 min-h-16">
             <div class="container">
-                <div class="flex items-center justify-center">
-                    <p class="text-body-md-bold text-white text-center">
-                        Required for Licensure in Georgia: 600 Hours/5 Months
-                    </p>
-                    <figure class="hidden md:block absolute top-0 left-0"><img
-                            src="/assets/image/sub-hero-illus-left.svg" alt="illus">
-                    </figure>
-                    <figure class="hidden md:block absolute top-0 right-0"><img
-                            src="/assets/image/sub-hero-illus-right.svg" alt="illus"></figure>
+                <div class="grid grid-cols-2 lg:grid-cols-4 lg:gap-6">
+                    <div class="instructor-tab-item active text-body-md-bold text-red-10">Esthetics Instructor</div>
+                    <div class="instructor-tab-item text-body-md-bold text-red-10">Cosmetology Instructor</div>
+                    <div class="instructor-tab-item text-body-md-bold text-red-10">Nail Instructor</div>
+                    <div class="instructor-tab-item text-body-md-bold text-red-10">Barber Instructor</div>
                 </div>
+                <figure class="hidden lg:block absolute top-0 left-0"><img src="/assets/image/sub-hero-illus-2-left.svg"
+                        alt="illus">
+                </figure>
+                <figure class="hidden lg:block absolute top-0 right-0"><img
+                        src="/assets/image/sub-hero-illus-2-right.svg" alt="illus"></figure>
             </div>
         </section>
         <!-- -------------------- section 2 -------------------- -->
@@ -269,22 +286,16 @@
                     <div class="flex flex-col justify-center items-center">
                         <div class="flex items-center gap-2">
                             <figure><img src="/assets/image/icon/sparkles.svg" alt="icon"></figure>
-                            <p class="text-body-lg-bold text-[#757575]">Esthetics is offered here</p>
+                            <p class="text-body-lg-bold text-[#757575]">Instructor is offered heres</p>
                         </div>
-                        <h2 class="text-heading-h4 xl:text-[32px] text-primary mt-2 text-center">Esthetics at
-                            Atlanta
-                            Beauty & Barber
-                            Academy in
-                            Atlanta, GA.</h2>
-                        <p class="max-w-[770px] mt-4 text-body-md-semibold text-center text-gray-50">Passionate about
-                            skincare and
-                            helping
-                            others? Our Esthetics program in Atlanta, GA,
-                            prepares
-                            you for a rewarding career
-                            in beauty and wellness. Learn essential skills, from rejuvenating facials to advanced
-                            skincare techniques, and become a
-                            confident, highly trained esthetician. </p>
+                        <h2 class="text-heading-h4 xl:text-[32px] text-primary mt-2 text-center">Instructor at Atlanta
+                            Beauty & Barber Academy in Atlanta, GA.</h2>
+                        <p class="max-w-[770px] mt-4 text-body-md-semibold text-center text-gray-50">Join us as an
+                            instructor and
+                            inspire the next generation of beauty professionals! Our program is designed for
+                            experienced experts who are passionate about sharing their knowledge and skills in
+                            cosmetology, barber, nails, and
+                            esthetics.</p>
                     </div>
                     <div class="mt-6 flex flex-col gap-4 justify-center items-center">
                         <div class="flex items-center gap-2">
@@ -301,9 +312,9 @@
                     <figure><img src="/assets/image/esthetician-ss2-illus.svg" alt="illus"></figure>
                 </div>
 
-                <div class="max-w-[1078px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <div class="">
-                        <h2 class="text-body-lg-bold text-primary">Why choose Us?</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="max-w-[538px]">
+                        <h2 class="text-body-lg-bold text-primary">Curriculum includes:</h2>
                         <p class="mt-4 text-body-md-semibold text-gray-50">Designed for all backgrounds—whether you're a
                             recent graduate or making a career change—our program provides the tools,
                             products, and hands-on training needed to earn your skincare licensure.</p>
@@ -311,24 +322,41 @@
                             <ul class="flex flex-col gap-4">
                                 <li class="flex items-center gap-2">
                                     <figure class="w-6 h-6"><img src="/assets/image/icon/check.svg" alt="icon"></figure>
-                                    <p class="text-body-md-medium text-dark-90">Hands-on experience with industry
-                                        professionals</p>
+                                    <p class="text-body-md-medium text-dark-90">Lesson Planning</p>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <figure class="w-6 h-6"><img src="/assets/image/icon/check.svg" alt="icon"></figure>
-                                    <p class="text-body-md-medium text-dark-90">Salon business</p>
+                                    <p class="text-body-md-medium text-dark-90">Teaching Methodologies</p>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <figure class="w-6 h-6"><img src="/assets/image/icon/check.svg" alt="icon"></figure>
-                                    <p class="text-body-md-medium text-dark-90">Client retention</p>
+                                    <p class="text-body-md-medium text-dark-90">Classroom Management</p>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <figure class="w-6 h-6"><img src="/assets/image/icon/check.svg" alt="icon"></figure>
-                                    <p class="text-body-md-medium text-dark-90">Resume writing</p>
+                                    <p class="text-body-md-medium text-dark-90">Creation of Lesson Plans</p>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <figure class="w-6 h-6"><img src="/assets/image/icon/check.svg" alt="icon"></figure>
-                                    <p class="text-body-md-medium text-dark-90">Job-seeking skills</p>
+                                    <p class="text-body-md-medium text-dark-90">Creation of Curriculum</p>
+                                </li>
+                            </ul>
+                            <ul class="flex flex-col gap-4">
+                                <li class="flex items-center gap-2">
+                                    <figure class="w-6 h-6"><img src="/assets/image/icon/check.svg" alt="icon"></figure>
+                                    <p class="text-body-md-medium text-dark-90">Instruction Delivery Methods</p>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <figure class="w-6 h-6"><img src="/assets/image/icon/check.svg" alt="icon"></figure>
+                                    <p class="text-body-md-medium text-dark-90">Conflict Resolution</p>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <figure class="w-6 h-6"><img src="/assets/image/icon/check.svg" alt="icon"></figure>
+                                    <p class="text-body-md-medium text-dark-90">Business Management</p>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <figure class="w-6 h-6"><img src="/assets/image/icon/check.svg" alt="icon"></figure>
+                                    <p class="text-body-md-medium text-dark-90">State Board Exam Preparation</p>
                                 </li>
                             </ul>
                         </div>
@@ -352,7 +380,7 @@
                 </div>
 
                 <div class="flex flex-col gap-6 lg:gap-10 mt-10">
-                    <div class="first-row grid grid-cols-1 md:grid-cols-2 xl::grid-cols-3 gap-6">
+                    <div class="first-row grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                         <div class="single-career-item">
                             <figure class="w-full"><img src="/assets/image/esthetician-ss3-figure-short.png"
                                     alt="figure"></figure>
@@ -393,6 +421,22 @@
                                     alt="figure"></figure>
                             <div class="text">
                                 <p class="text-body-lg-bold text-white">Makeup Artist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-row grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="single-career-item">
+                            <figure class="w-full"><img src="/assets/image/esthetician-ss3-figure-long.png"
+                                    alt="figure"></figure>
+                            <div class="text">
+                                <p class="text-body-lg-bold text-white">Beauty Influencers</p>
+                            </div>
+                        </div>
+                        <div class="single-career-item">
+                            <figure class="w-full"><img src="/assets/image/esthetician-ss3-figure-long.png"
+                                    alt="figure"></figure>
+                            <div class="text">
+                                <p class="text-body-lg-bold text-white">Waxing Specialist</p>
                             </div>
                         </div>
                     </div>
