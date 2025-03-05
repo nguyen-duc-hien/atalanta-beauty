@@ -805,7 +805,7 @@ hr {
 
 .hero-bg {
   position: relative;
-  height: 60vh;
+  height: 80vh;
   max-height: 631px;
   &::after {
     content: "";
@@ -821,4 +821,108 @@ hr {
 .sub-hero {
   padding: 8px 0;
   background: linear-gradient(90deg, #460707 0%, #630c0c 44%, #460707 100%);
+}
+
+.single-career-item {
+  position: relative;
+  border-radius: 10px;
+  .text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16px;
+    z-index: 2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) -19.82%,
+      rgba(0, 0, 0, 0.6) 99.87%
+    );
+    border-radius: 10px;
+    user-select: none;
+    z-index: 0;
+  }
+}
+
+.single-learn-item {
+  display: flex;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 54px;
+  border: 1px solid #ddd;
+  @extend .text-body-sm-bold;
+  color: #151515;
+}
+.single-learn-button {
+  display: flex;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 54px;
+  border: 1px solid #ddd;
+  background: var(--secondary);
+  @extend .text-body-sm-bold;
+  color: #151515;
+}
+
+.cta {
+  &-container {
+    width: 100%;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      border-radius: 16px;
+      background: linear-gradient(
+        192deg,
+        rgba(0, 0, 0, 0) -0.22%,
+        rgba(0, 0, 0, 0.6) 80.79%
+      );
+      user-select: none;
+      z-index: 0;
+    }
+  }
+  &-image {
+    width: 100%;
+    img {
+      min-height: 308px;
+    }
+  }
+  &-context {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  &-divider {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: #ddd;
+  }
 }
