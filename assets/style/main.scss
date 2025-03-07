@@ -951,3 +951,36 @@ hr {
     background: #ddd;
   }
 }
+
+.service {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  &-ser {
+    @extend .text-body-lg-medium;
+    color: #151515;
+  }
+  &-price {
+    @extend .text-body-lg-bold;
+    color: #151515;
+  }
+  &-sub {
+    @extend .text-body-md-medium;
+    color: #808080;
+  }
+}

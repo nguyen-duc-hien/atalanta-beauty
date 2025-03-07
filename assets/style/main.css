@@ -563,17 +563,17 @@ select:focus {
 .text-body-xl-regular {
   font-weight: 400;
 }
-.text-body-lg, .text-body-lg-regular, .text-body-lg-medium, .text-body-lg-semibold, .text-body-lg-bold, .text-body-lg-uppercase {
+.text-body-lg, .text-body-lg-regular, .text-body-lg-medium, .service-ser, .text-body-lg-semibold, .text-body-lg-bold, .service-price, .text-body-lg-uppercase {
   font-size: 18px;
   line-height: 155.6%;
 }
 @media screen and (max-width: 1280px) {
-  .text-body-lg, .text-body-lg-regular, .text-body-lg-medium, .text-body-lg-semibold, .text-body-lg-bold, .text-body-lg-uppercase {
+  .text-body-lg, .text-body-lg-regular, .text-body-lg-medium, .service-ser, .text-body-lg-semibold, .text-body-lg-bold, .service-price, .text-body-lg-uppercase {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 992px) {
-  .text-body-lg, .text-body-lg-regular, .text-body-lg-medium, .text-body-lg-semibold, .text-body-lg-bold, .text-body-lg-uppercase {
+  .text-body-lg, .text-body-lg-regular, .text-body-lg-medium, .service-ser, .text-body-lg-semibold, .text-body-lg-bold, .service-price, .text-body-lg-uppercase {
     font-size: 16px;
   }
 }
@@ -581,29 +581,29 @@ select:focus {
   font-weight: 700;
   text-transform: uppercase;
 }
-.text-body-lg-bold {
+.text-body-lg-bold, .service-price {
   font-weight: 700;
 }
 .text-body-lg-semibold {
   font-weight: 600;
 }
-.text-body-lg-medium {
+.text-body-lg-medium, .service-ser {
   font-weight: 500;
 }
 .text-body-lg-regular {
   font-weight: 400;
 }
-.text-body-md, .text-body-md-regular, .text-body-md-medium, .input-label .input-field, .input-label .input-title, .text-body-md-semibold, .text-body-md-bold, .text-body-md-uppercase {
+.text-body-md, .text-body-md-regular, .text-body-md-medium, .service-sub, .input-label .input-field, .input-label .input-title, .text-body-md-semibold, .text-body-md-bold, .text-body-md-uppercase {
   font-size: 16px;
   line-height: 150%;
 }
 @media screen and (max-width: 1280px) {
-  .text-body-md, .text-body-md-regular, .text-body-md-medium, .input-label .input-field, .input-label .input-title, .text-body-md-semibold, .text-body-md-bold, .text-body-md-uppercase {
+  .text-body-md, .text-body-md-regular, .text-body-md-medium, .service-sub, .input-label .input-field, .input-label .input-title, .text-body-md-semibold, .text-body-md-bold, .text-body-md-uppercase {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 992px) {
-  .text-body-md, .text-body-md-regular, .text-body-md-medium, .input-label .input-field, .input-label .input-title, .text-body-md-semibold, .text-body-md-bold, .text-body-md-uppercase {
+  .text-body-md, .text-body-md-regular, .text-body-md-medium, .service-sub, .input-label .input-field, .input-label .input-title, .text-body-md-semibold, .text-body-md-bold, .text-body-md-uppercase {
     font-size: 14px;
   }
 }
@@ -617,7 +617,7 @@ select:focus {
 .text-body-md-semibold {
   font-weight: 600;
 }
-.text-body-md-medium, .input-label .input-field, .input-label .input-title {
+.text-body-md-medium, .service-sub, .input-label .input-field, .input-label .input-title {
   font-weight: 500;
 }
 .text-body-md-regular {
@@ -1209,4 +1209,32 @@ hr.divider-v-3 {
   height: 1px;
   border: none;
   background: #ddd;
+}
+
+.service-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.service-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.service-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  gap: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.service-ser {
+  color: #151515;
+}
+.service-price {
+  color: #151515;
+}
+.service-sub {
+  color: #808080;
 }/*# sourceMappingURL=main.css.map */
