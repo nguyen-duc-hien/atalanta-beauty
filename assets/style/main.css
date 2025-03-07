@@ -811,6 +811,11 @@ select:focus {
   background-color: transparent;
   border-color: transparent;
 }
+.button.show-more {
+  background: transparent;
+  color: #151515;
+  border: 1px solid #ddd;
+}
 
 a {
   display: flex;

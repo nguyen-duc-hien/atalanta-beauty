@@ -510,6 +510,11 @@ select {
     background-color: transparent;
     border-color: transparent;
   }
+  &.show-more {
+    background: transparent;
+    color: #151515;
+    border: 1px solid #ddd;
+  }
 }
 
 a {
