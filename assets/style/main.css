@@ -421,7 +421,7 @@ select:focus {
 }
 @media screen and (max-width: 992px) {
   .text-heading-display-1 {
-    font-size: 60px;
+    font-size: 56px;
   }
 }
 .text-heading-display-2 {
@@ -846,6 +846,30 @@ a.link-nav {
 }
 a.link-nav:hover {
   color: var(--secondary);
+}
+
+.button-tab {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 49rem;
+}
+.button-tab:disabled {
+  cursor: not-allowed;
+}
+.button-tab:disabled figure svg path {
+  stroke: #808080;
+}
+.button-tab:hover {
+  background-color: #eeeeee;
+}
+.button-tab:hover figure svg path {
+  stroke: #630c0c;
+}
+.button-tab.prev {
+  rotate: 180deg;
 }
 
 .shadow-1 {

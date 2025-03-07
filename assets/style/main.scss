@@ -61,7 +61,7 @@ select {
     }
 
     @media screen and (max-width: 992px) {
-      font-size: 60px;
+      font-size: 56px;
     }
   }
   &-display-2 {
@@ -545,6 +545,38 @@ a {
     &:hover {
       color: var(--secondary);
     }
+  }
+}
+
+.button-tab {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 49rem;
+  &:disabled {
+    cursor: not-allowed;
+    figure {
+      svg {
+        path {
+          stroke: #808080;
+        }
+      }
+    }
+  }
+  &:hover {
+    background-color: #eeeeee;
+    figure {
+      svg {
+        path {
+          stroke: #630c0c;
+        }
+      }
+    }
+  }
+  &.prev {
+    rotate: 180deg;
   }
 }
 
