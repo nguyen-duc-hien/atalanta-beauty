@@ -436,7 +436,7 @@ select:focus {
 }
 @media screen and (max-width: 992px) {
   .text-heading-display-2 {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 .text-heading-h3 {
@@ -815,6 +815,10 @@ select:focus {
   background: transparent;
   color: #151515;
   border: 1px solid #ddd;
+}
+.button.show-more:hover {
+  background: #eee;
+  color: var(--primary);
 }
 
 a {
@@ -1266,4 +1270,81 @@ hr.divider-v-3 {
 }
 .service-sub {
   color: #808080;
+}
+
+.step-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 8px;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+}
+@media (max-width: 992px) {
+  .step-wrap {
+    padding: 20px;
+  }
+}
+.step-row {
+  display: flex;
+  gap: 32px;
+}
+.step-row .step-content {
+  flex: 1;
+}
+.step-row .step-content .title {
+  color: #151515;
+}
+.step-row.active .step-content .title {
+  color: #630c0c;
+}
+
+.accordion-item {
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px dashed #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+.accordion-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ddd;
+}
+.accordion-title > p {
+  flex: 1;
+}
+.accordion-content {
+  margin-top: 16px;
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: max-height 1s ease-in-out;
+}
+.accordion-item:hover .accordion-title .accordion-show-more {
+  color: var(--primary);
+}
+.accordion-item:hover .accordion-title .accordion-show-more svg path {
+  stroke: var(--primary);
+}
+.accordion-item.active .accordion-title .accordion-show-more svg {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(180deg);
+}
+.accordion-item.active .accordion-content {
+  max-height: 1000px;
+  transition: max-height 1s ease-in-out;
+}
+.accordion-item:nth-child(2n+1) {
+  background: #eee;
+}
+.accordion-item:nth-child(2n+1):hover .accordion-title .accordion-show-more {
+  color: #808080;
+}
+.accordion-item:nth-child(2n+1):hover .accordion-title .accordion-show-more svg path {
+  stroke: #808080;
 }/*# sourceMappingURL=main.css.map */
